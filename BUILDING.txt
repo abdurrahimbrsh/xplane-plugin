@@ -1,0 +1,70 @@
+Building
+========
+
+Requirements
+------------
+    
+For Microsoft Windows:
+    - Visual Studio 2017
+    - Boost
+
+For Linux:
+    - GNU C++
+    - Boost
+    - Make
+
+For MacOS:
+    - XCode Command Line Tools
+    - Boost
+
+
+Installation of requirements
+----------------------------
+	
+For Microsoft Windows:
+	- Download and install Visual Studio 2017 from https://visualstudio.microsoft.com/vs/
+		- During installation make sure that the "Desktop development with C++" workload
+		    is selected.
+		- Also select "Git for Windows" under "Individual components".
+	- Using git, clone the vcpkg repository from https://github.com/Microsoft/vcpkg into a
+		directory of your choice, for example C:\vcpkg.
+		- This can be done by running the following commands in Windows PowerShell:
+			- cd C:\
+			- git clone https://github.com/Microsoft/vcpkg
+	- Open Windows PowerShell and run the following commands to install Boost:
+		- cd C:\vcpkg 
+		- .\bootstrap-vcpkg.bat
+		- .\vcpkg.exe integrate install 
+		- .\vcpkg.exe install boost:x64-windows
+
+For Ubuntu Linux 18.04:
+	- Run the following commands in a shell:
+		- sudo apt install build-essential g++ libboost-dev libboost-program-options1.65-dev mesa-common-dev libgl1-mesa-dev
+
+For MacOS:
+	- Install XCode from the App Store.
+	- Install the XCode command line tools.
+	- Install Homebrew from https://brew.sh/
+	- Run the following commands in a Terminal:
+		- brew install boost
+
+
+Build instructions
+------------------
+
+For Microsoft Windows:
+    - Open RealSimGear-GNSx30.sln and build for Release configuration.
+    - The plugin will be in plugin_Release directory.
+
+For Linux:
+    - make -f linux.make
+    - Plugin will be in the plugin directory.
+
+For MacOS:
+    - make -f mac.make
+    - Plugin will be in the plugin directory.
+
+
+After the plugin is built for each operating system, copy the build outputs from 
+all platform into one shared plugin folder to obtain a cross plattform X-Plane plugin.
+     

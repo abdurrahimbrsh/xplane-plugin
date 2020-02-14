@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Mac build & deploy",
+            "type": "shell",
+            "command": "ssh macvm.lan \"cd mint2/dev/RSG_Xplane_plugin ; make -f mac.make && ./deploy_mac.sh\"",
+            "group": "build",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Linux build & deploy",
+            "type": "shell",
+            "command": "make -f linux.make && ./deploy_linux.sh",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        },  
+        {      
+            "label": "Mac ConsoleTest",
+            "type": "shell",
+            "command": "ssh macvm.lan \"cd mint2/dev/RSG_Xplane_plugin ; make -f mac.make DEBUG=1 ConsoleTest\"",
+            "group": "build",
+            "problemMatcher": "$gcc"
+        },        
+        {
+            "label": "Linux ConsoleTest",
+            "type": "shell",
+            "command": "make -f linux.make && cd linux && ./ConsoleTest",
+            "problemMatcher": "$gcc"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+RealSimGear Instructions for modifying vFlyteAir SR20 for use with RSG G1000
+
+1) Replace the default G1000 PFD and MFD bezel's with no-bezel versions
+2) Make a copy the vFlyteAir_CirrusSR20_v2.6 folder, name is something like vFlyteAir_CirrusSR20_v2.6-RSG
+3) Open PlaneMaker.exe from the X-Plane root folder
+4) File > Open > X-Plane 11 > Aircraft > Extra Aircraft > vFlyteAir_CirrusSR20_v2.6-RSG > Open Aircraft (at bottom of screen)
+5) Navigate to Standard > Panel: 3-D
+6) Zoom out until you see both PFD and MFD on the screen
+7) Add the Laminar G1000 PFD to the panel
+   a) In the left selection panel find EFIS > G1000 > G1000PFD.png
+   b) Drag G1000PFD.png onto middle screen
+   c) At bottom of screen, click in the Size area and set it to 0.80
+   d) Move the PFD over top of the existing PFD (upper left one) so that it aligns over top
+   e) Rename the PFD by clicking the Name in the lower left panel and setting it to g1000n1
+   f) Ensure both Bus 1 and Bus 2 boxes are checked
+ 8) Add the Laminar G1000 MFD to the panel
+   a) In the left selection panel find EFIS > G1000 > G1000MFD.png
+   b) Drag G1000MFD.png onto middle screen
+   c) At bottom of screen, click in the Size area and set it to 0.80
+   d) Move the MFD over top of the existing MFD (lower right one) so that it aligns over top
+   e) Rename the MFD by clicking the Name in the lower left panel and setting it to g1000n3
+   f) Ensure Bus 1 is checked, Bus 2 is not
+9) Remove the existing PFD
+   a) In the right panel, select the previous PFD section and hit the Delete button from upper menu (\)
+10) Remove the existing MFD
+   a) In the right panel, select the previous MFD section and hit the Delete button from upper menu (\)
+11) Save the modifications by clicking on the disk button in upper right then exit back to main aircraft page by clicking the <| button in upper right
+12) Save the aircraft again File > Save
+13) Exit out of Plane Maker
+14) Start X-Plane and select the new version of the vFlyteAir_CirrusSR20_v2.6-RSG
+15) Once aircraft is loaded, open the Settings and go to the Keyboard mapping
+   a) Search for G1000 PFD Popup
+   b) In the command box, type in a keystroke to be used to pop up the PFD (suggest |)
+   c) Search for G1000 MFD Popup
+   d) In the command box, type in a different keystroke to be used to pop up the PFD (suggest Shift |)
+   e) Select Done
+16) Back in the airccraft, high the keys assigned to pop up both the PFD and MFD
+17) Make the PFD and MFD into pop-outs by clicking in the upper right corner of each (they will go into a Window)
+18) Drag each window to the appropriate RSG screen, PFD or MFD, and maximize the window
+
+
+Delete transponder_HMs.png
+Delete Backup Tapes
+Delete Backup Horizon
+Delete Ro_G1000_Start PFD
+Delete Ro_G1000_Start MFD
+Delete but_flitedir_modeSC
+Delete cabin_alt.png

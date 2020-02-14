@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/surban/data/Software/arduino-1.8.5/tools/**",
+                "/home/surban/data/Software/arduino-1.8.5/hardware/arduino/avr/**",
+                "${workspaceFolder}",
+                "${workspaceFolder}/SDK/CHeaders/XPLM",
+                "${workspaceFolder}/RealSimGear-GNSx30"
+            ],
+            "defines": [
+                "XPLM200",
+                "XPLM210",
+                "XPLM300",
+                "XPLM301",
+                "LIN",
+                "TRACE"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

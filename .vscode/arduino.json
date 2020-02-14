@@ -1,0 +1,6 @@
+{
+    "port": "/dev/ttyACM0",
+    "board": "arduino:avr:mega",
+    "configuration": "cpu=atmega2560",
+    "sketch": "Arduino/RealSimGear-G1000_B2/RealSimGear-G1000_B2.ino"
+}
